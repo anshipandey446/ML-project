@@ -1,1 +1,106 @@
+[Running] python -u "c:\Users\Vidhi\OneDrive\Desktop\ML practical\rice.py"
 
+Original Dataset:
+  Domain Code                        Domain  ...  Flag Description Note
+0         QCL  Crops and livestock products  ...    Official value  NaN
+1         QCL  Crops and livestock products  ...    Official value  NaN
+2         QCL  Crops and livestock products  ...    Official value  NaN
+3         QCL  Crops and livestock products  ...    Official value  NaN
+4         QCL  Crops and livestock products  ...    Official value  NaN
+
+[5 rows x 15 columns]
+
+Columns in Dataset:
+['Year', 'Area harvested', 'Production', 'Yield']
+
+Dataset Size:
+(64, 4)
+
+First Year: 1961
+Last Year : 2024
+
+============================================
+TRAINING AND TESTING DATA
+============================================
+Training Period: 1961 - 2011
+Testing Period : 2012 - 2024
+Training Observations: 51
+Testing Observations: 13
+
+============================================
+LINEAR REGRESSION
+============================================
+Hypothesis:
+h(w,b) = w*x + b
+
+w = 2142748.6374886883
+b = -4159881271.647633
+
+Equation:
+h(w,b) = (2142748.6375)x + (-4159881271.6476)
+
+============================================
+POLYNOMIAL REGRESSION
+============================================
+Hypothesis:
+h(w,b) = w2*x^2 + w1*x + b
+
+w1 = 0.1358351590960715
+w2 = 539.5431727736008
+b  = -2032563672.2654366
+
+Equation:
+h(w,b) = (539.54317277)x^2 + (0.1358)x + (-2032563672.2654)
+
+============================================
+MULTIVARIATE LINEAR REGRESSION
+============================================
+Hypothesis:
+h(w,b) = w1*x1 + w2*x2 + w3*x3 + b
+
+w1 = -85702.87357855399
+w2 = 1.7617085770351313
+w3 = 44623.65450808392
+b  = 91119412.13519405
+
+Equation:
+h(w,b) = (-85702.8736)x1 + (1.761709)x2 + (44623.6545)x3 + (91119412.1352)
+
+Linear Regression
+--------------------------------
+MAE  : 13533816.34
+RMSE : 18201510.5
+R2   : 0.1378
+
+Polynomial Regression
+--------------------------------
+MAE  : 13080528.17
+RMSE : 17787186.18
+R2   : 0.1767
+
+Multivariate Regression
+--------------------------------
+MAE  : 4610812.85
+RMSE : 7074421.84
+R2   : 0.8698
+
+============================================
+MODEL COMPARISON
+============================================
+                  Model          MAE         RMSE     R2
+      Linear Regression 1.353382e+07 1.820151e+07 0.1378
+  Polynomial Regression 1.308053e+07 1.778719e+07 0.1767
+Multivariate Regression 4.610813e+06 7.074422e+06 0.8698
+C:\Users\Vidhi\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
+  warnings.warn(
+
+
+============================================
+      FUTURE RICE PRODUCTION PREDICTION
+              2027 - 2030
+============================================
+ Year Linear Prediction Polynomial Prediction Multivariate Prediction
+ 2027       194,129,916           208,264,903             194,524,159
+ 2028       196,501,959           211,802,375             196,907,629
+ 2029       198,874,001           215,373,144             199,291,099
+ 2030       201,246,044           218,977,211             201,674,569
